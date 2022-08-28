@@ -3,27 +3,62 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
 
-public class Game extends Canvas implements KeyListener {
-    public static final int DINOGAME_WIDTH = 800;
-    public static final int DINOGAME_HEIGHT = 400;
-    public static final int DINOGAME_GROUND_HEIGHT = 250;
+public class Game extends Canvas implements Runnable, KeyListener {
+
+    public static final int GAME_WIDTH = 800;
+
+    public static final int GAME_HEIGHT = 400;
+
+    public static final int GROUND_HEIGHT = 250;
+
+    private enum State {
+        PLAYING,
+        NOT_PLAYING,
+        GAME_OVER
+    }
 
     private boolean running = false;
 
-    private Dino dino;
-    private ObstacleHandler obsHandler;
+    private Thread thread;
+
+    private State state = State.NOT_PLAYING;
+
+    private Player player;
+
+    private ObstacleHandler obstacleHandler;
+
+    private CloudHandler cloudHandler;
+
+    private Score score;
+
+    private ResetButton resetButton;
 
     public Game() {
-        dino = new Dino(); // 2
-        obsHandler = new ObstacleHandler();
+
+        player = new Player();
+        obstacleHandler = new ObstacleHandler();
+        cloudHandler = new CloudHandler();
+        score = new Score();
+        resetButton = new ResetButton();
+
         addKeyListener(this);
     }
 
-    public static void main (String[] args) {
-        new GameWindow(DINOGAME_WIDTH, DINOGAME_HEIGHT, "DINO GAME", new Game());
+    public static void main(String[] args) {
+        new GameWindow(GAME_WIDTH, GAME_HEIGHT, "Dino Game", new Game());
     }
 
-    public void start () {
+    public synchronized void start() {
+        if (running) {
+            return;
+        }
+        running = true;
+        thread = new Thread(this);
+        thread.start();
+    }
+
+    @Override
+    public void run() {
         long lastTime = System.nanoTime();
         double amountOfTicks = 100.0;
         double ns = 1000000000 / amountOfTicks;
@@ -31,66 +66,105 @@ public class Game extends Canvas implements KeyListener {
         long timer = System.currentTimeMillis();
         int updates = 0;
         int frames = 0;
-    
-            running = true;
-    
+
         while (running) {
+
             long now = System.nanoTime();
             delta += (now - lastTime) / ns;
             lastTime = now;
-    
+
             while (delta >= 1) {
                 tick();
                 updates++;
                 delta--;
             }
+
             render();
             frames++;
-    
-                    // this prints the tick and frame rate to the console
+
             if (System.currentTimeMillis() - timer > 1000) {
                 timer += 1000;
                 System.out.println("fps: " + frames + " ticks: " + updates);
                 frames = 0;
                 updates = 0;
             }
+        }    
+    }
+
+    private void tick() {
+        if (state == State.PLAYING) {
+            player.tick();
+            obstacleHandler.tick();
+            cloudHandler.tick();
+            score.tick();
         }
+        detectCollisions();
     }
 
-    public void tick () {
-        dino.tick(); // 2
-    }
+    private void render() {
+        BufferStrategy bs = this.getBufferStrategy();
 
-    public void render () {
-        BufferStrategy buffer = this.getBufferStrategy();
-
-        if (buffer==null) {
+        if (bs == null) {
             this.createBufferStrategy(3);
             return;
         }
 
-        Graphics g = buffer.getDrawGraphics();
-        g.setColor(Color.white);
-        g.fillRect(0, 0, DINOGAME_WIDTH, DINOGAME_HEIGHT);
-        g.setColor(Color.black);
-        g.drawLine(0, DINOGAME_GROUND_HEIGHT, DINOGAME_WIDTH, DINOGAME_GROUND_HEIGHT);
+        Graphics g = bs.getDrawGraphics();
 
-        dino.render(g, this); // 2
-        obsHandler.render(g, this);
+        g.setColor(Color.white);
+        g.fillRect(0,0, GAME_WIDTH, GAME_HEIGHT);
+        g.setColor(Color.black);
+        g.drawLine(0, GROUND_HEIGHT, GAME_WIDTH, GROUND_HEIGHT);
+
+        cloudHandler.render(g, this);
+        obstacleHandler.render(g, this);
+        score.render(g);
+        player.render(g, this);
+
+        if (state == State.GAME_OVER) {
+            resetButton.render(g, this);
+        }
 
         g.dispose();
-        buffer.show();
+        bs.show();
     }
 
-    public void keyTyped(KeyEvent e) {}
+    private void detectCollisions() {
+        for (Obstacle obstacle : obstacleHandler.getObstacles()) {
+            if (player.getHitBox().intersects(obstacle.getHitBox())) {
+                state = State.GAME_OVER;
+                player.setSprite(SpriteHandler.deadDino);
+                break;
+            }
+        }
+    }
 
-    public void keyPressed (KeyEvent e) {
+    private void reset() {
+        player = new Player();
+        obstacleHandler = new ObstacleHandler();
+        cloudHandler = new CloudHandler();
+        state = State.NOT_PLAYING;
+        score.clear();
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
-        if(key==KeyEvent.VK_SPACE) {
-            dino.jumpAction();
-        } 
-        if (e.getKeyCode()==KeyEvent.VK_ESCAPE) System.exit(0);
+
+        if (state == State.NOT_PLAYING && (key == KeyEvent.VK_SPACE || key == KeyEvent.VK_UP)) {
+            state = State.PLAYING;
+        } else if (state == State.PLAYING && (key == KeyEvent.VK_SPACE || key == KeyEvent.VK_UP)) {
+            player.jumpAction();
+        } else if (state == State.GAME_OVER && (key == KeyEvent.VK_SPACE || key == KeyEvent.VK_UP)) {
+            reset();
+        }
     }
 
-    public void keyReleased (KeyEvent e) {}
+    @Override
+    public void keyTyped(KeyEvent e) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+    }
 }

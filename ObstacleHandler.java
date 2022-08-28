@@ -6,12 +6,11 @@ import java.util.Random;
 public class ObstacleHandler {
 
     private ArrayList<Obstacle> obstacles = new ArrayList<>();
+    private Random random = new Random();
 
     private float dx = -3;
     private float ddx = -0.001f;
-		
-	private long lastObst;
-    private Random random = new Random();
+    private long lastObst;
 
     public void tick() {
         double rand = random.nextDouble();
@@ -25,12 +24,12 @@ public class ObstacleHandler {
             obstacle.dx = dx;
             obstacle.tick();
 
-            if (obstacle.x < -100) {        // removing obstacles along the way
+            if (obstacle.x < -100) {
                 obstacles.remove(obstacle);
                 break;
             }
         }
-		dx += ddx;
+        dx += ddx;
     }
 
     public void render(Graphics g, ImageObserver observer) {

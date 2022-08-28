@@ -1,36 +1,32 @@
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-import java.awt.*;
 
 public abstract class GameObject {
+
     protected float x, y;
+
     protected float dx, dy;
 
-    protected BufferedImage dinoImage;
+    protected BufferedImage sprite;
 
-    public GameObject (float x, float y) {
+    public GameObject(float x, float y) {
         this.x = x;
         this.y = y;
     }
 
-    public void tick () {
-        x += dx;
-        y += dy;
+    public abstract void tick();
+
+    public abstract void render(Graphics g, ImageObserver observer);
+
+    public Rectangle getHitBox() {
+        Rectangle hitBox = new Rectangle(sprite.getWidth(), sprite.getHeight());
+        hitBox.setLocation((int) x, (int) y - sprite.getHeight());
+        return hitBox;
     }
 
-    public void render (Graphics g, ImageObserver observer) {
-        g.drawImage(dinoImage, (int)x, (int)y - dinoImage.getHeight(), observer);
+    public void setSprite(BufferedImage sprite) {
+        this.sprite = sprite;
     }
 
-    public static BufferedImage loadDinoImage (String imagePath) {
-        try {
-            return ImageIO.read(new File(imagePath));
-        } catch (IOException o) {
-            System.out.println("Error opening file.");
-        }
-        return null;
-    }
 }
