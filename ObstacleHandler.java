@@ -25,7 +25,7 @@ public class ObstacleHandler {
             obstacle.dx = dx;
             obstacle.tick();
 
-            if (obstacle.x < -100) {
+            if (obstacle.x < -100) {        // removing obstacles along the way
                 obstacles.remove(obstacle);
                 break;
             }

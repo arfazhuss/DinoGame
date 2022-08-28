@@ -11,9 +11,11 @@ public class Game extends Canvas implements KeyListener {
     private boolean running = false;
 
     private Dino dino;
+    private ObstacleHandler obsHandler;
 
     public Game() {
         dino = new Dino(); // 2
+        obsHandler = new ObstacleHandler();
         addKeyListener(this);
     }
 
@@ -74,21 +76,20 @@ public class Game extends Canvas implements KeyListener {
         g.drawLine(0, DINOGAME_GROUND_HEIGHT, DINOGAME_WIDTH, DINOGAME_GROUND_HEIGHT);
 
         dino.render(g, this); // 2
+        obsHandler.render(g, this);
 
         g.dispose();
         buffer.show();
     }
 
-    public void keyTyped(KeyEvent e) {
-        int key = e.getKeyCode();
-        if (key==KeyEvent.VK_ESCAPE) System.exit(0);
-    }
+    public void keyTyped(KeyEvent e) {}
 
     public void keyPressed (KeyEvent e) {
         int key = e.getKeyCode();
         if(key==KeyEvent.VK_SPACE) {
             dino.jumpAction();
-        }
+        } 
+        if (e.getKeyCode()==KeyEvent.VK_ESCAPE) System.exit(0);
     }
 
     public void keyReleased (KeyEvent e) {}
