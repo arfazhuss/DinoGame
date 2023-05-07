@@ -1,5 +1,6 @@
 Here's an overview of the T-Rex game in mac-based machine:
 
+https://user-images.githubusercontent.com/84450659/236665602-aac9f7c2-bb33-4e7c-83cf-315eda34376e.mp4
 
 Here are the brief steps of running the file in mac-based machine:
   
