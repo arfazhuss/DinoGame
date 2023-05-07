@@ -9,6 +9,7 @@ Here are the brief steps of running the file in mac-based machine:
   4. On Terminal, type 'javac Game.java && java Game'
 
 This video consists of the steps involved:
+
 https://user-images.githubusercontent.com/84450659/210307515-01c31b1d-b63a-417f-87b3-63f171e7a7dc.mp4
 
 The previous directory of this repository was 'DinoGame' which was the original name of this project.
