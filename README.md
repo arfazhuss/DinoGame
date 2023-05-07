@@ -7,5 +7,3 @@ The previous directory of this repository was 'DinoGame' which was the original 
 Originally designed and developed by Google, DinoGame, a popular side-scrolling endless runner game, was the original motivation behind this project. The aim was to develop a cross-platform Java version in order emulate the classic gameplay experience throughout Mac, Ubuntu and Windows.
 
 The video can be found in [YouTube](https://youtu.be/DGIck_-l1cM) or, in the directory ./T-Rex\ 1.mov.
-
-[![](https://markdown-videos.deta.dev/youtube/dQw4w9WgXcQ)](https://youtu.be/dQw4w9WgXcQ)
