@@ -1,0 +1,216 @@
+commit 0b694b16c323583ba4f90c788f145411ca48dcf3
+Author: Arfaz Hossain <arfazhussain@uvic.ca>
+Date:   Sun May 28 20:46:07 2023 -0700
+
+    bash script updated
+    Scheduled Commit by @arfazhxss on Sun 28 May 2023 20:46:07 PDT
+
+commit b5e03cc3d021fd23b5b85b72089188f2b2a1ca65
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Tue May 9 00:25:35 2023 -0700
+
+    Routine Commit
+    by @arfazhxss on Tue  9 May 2023 00:25:35 PDT
+
+commit 2e76e7d3a1129ffa7f453226e9f71967e02de3e2
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Tue May 9 00:25:24 2023 -0700
+
+    Routine Commit
+    by @arfazhxss on Tue  9 May 2023 00:25:24 PDT
+
+commit c71de2c1603b145c26416a1119baa42badfcb03c
+Merge: 9012642 75fb5de
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Tue May 9 00:24:22 2023 -0700
+
+    Merge remote-tracking branch 'refs/remotes/origin/main'
+
+commit 9012642142b70035ff43fc65c5b6b03365f868cd
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Tue May 9 00:23:05 2023 -0700
+
+    Routine Commit
+    by @arfazhxss on Tue  9 May 2023 00:23:05 PDT
+
+commit 75fb5deeb0ad1130c0b341fbcde8674432aafb99
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sun May 7 01:08:18 2023 -0700
+
+    Update README.md
+
+commit 6ec855320a87e2a6315b03e7bf6314fca23f6763
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sun May 7 01:07:12 2023 -0700
+
+    Final Update README.md
+
+commit 69e24b85a401645bbd94a1d00400c07c6f89fa3a
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sun May 7 01:01:27 2023 -0700
+
+    Update README.md
+
+commit 2df4668688fbb50ef1ec8e86b2a7af839c6432d3
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sun May 7 01:01:09 2023 -0700
+
+    Update README.md
+
+commit c34527480b5a875aa8d7e22f2dc32eb87d9d90af
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sun May 7 00:52:54 2023 -0700
+
+    Update README.md
+
+commit f0538abcd402cacd84c517b18dd394eac6ef40c8
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sun May 7 00:52:20 2023 -0700
+
+    Update README.md
+
+commit f2a6db4fed8b80e3c340d3672fc09b404f0a5ca1
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sun May 7 00:49:50 2023 -0700
+
+    Routine Commit Session
+    Committed on: [Sun  7 May 2023 00:49:50 PDT]
+    by Arfaz
+
+commit 667b1d9ed145df4f5318d81ebb41dc6e3af3a78d
+Merge: fdeb4b1 675b528
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sat May 6 20:34:46 2023 -0700
+
+    Merge remote-tracking branch 'refs/remotes/origin/main'
+
+commit fdeb4b15999bee57fcf4d84df32d3749ed7abe27
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sat May 6 20:33:19 2023 -0700
+
+    Routine Commit Session
+    Committed on: [Sat  6 May 2023 20:33:18 PDT]
+    by Arfaz
+
+commit 675b5281ad028f455f6e1cd51ba7950dc9a65303
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sun Feb 12 19:37:35 2023 -0800
+
+    Update README.md
+
+commit 30556483ab34f7c1f5821a53f97862d94c71cdd7
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Sun Feb 12 19:37:12 2023 -0800
+
+    Update README.md
+
+commit 0c85c7d4e709b8ef50be564d480b4c44efc3d814
+Merge: d456030 52e2eea
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Mon Jan 2 22:20:48 2023 -0800
+
+    Routine Commit Session
+    Committed on: [Mon  2 Jan 2023 22:20:48 PST]
+    by Arfaz
+
+commit d45603036f395d010307da81c6e9f898b20bec98
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Mon Jan 2 22:17:48 2023 -0800
+
+    Routine Commit Session
+    Committed on: [Mon  2 Jan 2023 22:17:47 PST]
+    by Arfaz
+
+commit 52e2eea109cc2109eb6fc140755ff0327be527e4
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Mon Jan 2 22:13:20 2023 -0800
+
+    Update README.md
+
+commit 063bfef6c45904b2932bb010a1e18d96f4113c9d
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Mon Jan 2 21:48:17 2023 -0800
+
+    Update README.md
+
+commit d558dba20d272fe508269d4a4b49ed48334069b5
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Mon Jan 2 21:47:31 2023 -0800
+
+    Update README.md
+
+commit 69f165d91aa46d74b148dd72b0f00cdfce80fade
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Mon Jan 2 21:42:20 2023 -0800
+
+    Update README.md
+
+commit fb3b7ed8a873232ec5775b219799f24c052bb8e6
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Mon Jan 2 21:40:37 2023 -0800
+
+    Routine Commit Session
+    Committed on: [Mon  2 Jan 2023 21:40:37 PST]
+    by Arfaz
+
+commit 0dedadf06aeebced1665d216c92ee3941012d93b
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Mon Jan 2 21:39:18 2023 -0800
+
+    Create README.md
+
+commit 2a8438c75ab99176cbfdc06ca08bbc545c1858b2
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Mon Jan 2 21:35:07 2023 -0800
+
+    Routine Commit Session
+    Committed on: [Mon  2 Jan 2023 21:35:07 PST]
+    by Arfaz
+
+commit 06a3c9ff73f8af26f186ba08958f540f5cf42624
+Author: Arfaz Hussain <arfazhussain@uvic.ca>
+Date:   Tue Dec 13 16:00:59 2022 -0800
+
+    minor update
+
+commit aa3f4b8a5d524c900f83a4cf553e96bb1c8f686e
+Author: arfazhussain <arfazhussain.zn@gmail.com>
+Date:   Sun Aug 28 00:55:18 2022 -0700
+
+    final-001
+
+commit f71af3b32f21c03bdc2941c9907efc8797fb49af
+Author: arfazhussain <arfazhussain.zn@gmail.com>
+Date:   Sat Aug 27 23:55:22 2022 -0700
+
+    Aug27 -2
+
+commit fcd442e4360c24e2acd5227ac0fbcca10c46e2c7
+Author: arfazhussain <arfazhussain.zn@gmail.com>
+Date:   Sat Aug 27 22:01:12 2022 -0700
+
+    Aug27 -MidFunctionUpdates
+
+commit f5edc77aca88337a6de8c63d61f52b5864b4ac66
+Author: arfazhussain <arfazhussain.zn@gmail.com>
+Date:   Fri Aug 26 22:38:18 2022 -0700
+
+    2
+
+commit 48bd6282fb1aadbdae596ea20849712e08754072
+Author: arfazhussain <arfazhussain.zn@gmail.com>
+Date:   Fri Aug 26 22:21:36 2022 -0700
+
+    Aug26 -upd
+
+commit d3c41065ddbde55b2c9214bb2f09050f0ed5c663
+Author: arfazhussain <arfazhussain@users.noreply.github.com>
+Date:   Mon Aug 15 23:38:23 2022 -0700
+
+    Aug15
+
+commit 718449c80b2f9a40d84336469cfdc14a77a63591
+Author: arfazhussain <arfazhussain@users.noreply.github.com>
+Date:   Sun Jul 31 23:38:33 2022 -0700
+
+    Initial commit
