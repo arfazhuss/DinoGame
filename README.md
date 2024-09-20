@@ -1,5 +1,5 @@
 # T-Rex Game - Java Implementation
-The previous directory of this repository was 'DinoGame' which was the original name of this project. The Chrome DinoGame, also known as the offline T-Rex game, was created by Google Chrome engineer, Sebastien Gabriel, in 2014. The game was designed as a fun way to entertain users when their internet connection was lost. The game features a pixelated T-Rex that jumps over cacti and avoids obstacles, with the player earning points for every successful jump. The aim was to develop a cross-platform Java version in order emulate the classic gameplay experience throughout Mac, Ubuntu and Windows.
+The Chrome DinoGame, also known as the offline T-Rex game, was created by Google Chrome engineer, Sebastien Gabriel, in 2014. The game was designed as a fun way to entertain users when their internet connection was lost. The game features a pixelated T-Rex that jumps over cacti and avoids obstacles, with the player earning points for every successful jump. The aim was to develop a cross-platform Java version in order emulate the classic gameplay experience throughout Mac, Ubuntu and Windows.
 
 Here's an overview of the T-Rex game in mac-based machine:
 
@@ -64,6 +64,7 @@ This table offers a brief explanation of each script's role within the project. 
 1. Download this repository to a local directory (e.g., "Rex Directory").
 2. Open a terminal and navigate to the directory using `cd <path-to-directory>`.
 3. Compile and run the game using the following command:
+
    ```bash
    javac Game.java && java Game
 
