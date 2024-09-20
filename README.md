@@ -20,4 +20,16 @@ ABOUT THIS PROJECT:
 
   The Chrome DinoGame, also known as the offline T-Rex game, was created by Google Chrome engineer, Sebastien Gabriel, in 2014. The game was designed as a fun way to entertain users when their internet connection was lost. The game features a pixelated T-Rex that jumps over cacti and avoids obstacles, with the player earning points for every successful jump. The aim was to develop a cross-platform Java version in order emulate the classic gameplay experience throughout Mac, Ubuntu and Windows.
 
-The video can be found in [YouTube](https://youtu.be/DGIck_-l1cM) or, in the directory ./T-Rex\ 1.mov.
+## Key Files in the Project
+
+| File                 | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| `Game.java`          | Core game loop handling the timing, game speed, state updates, and user input events such as jumping. |
+| `Player.java`        | Represents the T-Rex character, manages actions like jumping, and interacts with the `GameObject` class to control movement. |
+| `Obstacle.java`      | Manages obstacles like cacti, handles their movement, and detects collisions with the player. |
+| `CloudHandler.java`  | Handles the appearance of clouds in the background, adding depth to the game. |
+| `Cloud.java`         | Represents individual cloud objects; visual elements that enhance the game's atmosphere. |
+| `Score.java`         | Tracks and displays the player's score, which increments as the player avoids obstacles. |
+| `GameWindow.java`    | Manages the rendering of the game window using Java Swing, creating and updating the display frame. |
+
+This table offers a brief explanation of each script's role within the project. Feel free to explore the source code to gain a deeper understanding of how the game is implemented.
